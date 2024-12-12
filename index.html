@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Баг Трекер</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="background">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div id="app">
+      <header>
+        <h1>Баг Трекер</h1>
+        <nav id="main-nav">
+          <button id="login-btn">Вхід</button>
+          <button id="register-btn">Реєстрація</button>
+          <button id="logout-btn" style="display: none">Вихід</button>
+        </nav>
+      </header>
+
+      <main>
+        <section id="login-form" class="form">
+          <h2>Вхід в систему</h2>
+          <form id="login">
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Пароль" required />
+            <button type="submit">Увійти</button>
+          </form>
+        </section>
+
+        <section id="register-form" class="form" style="display: none">
+          <h2>Створення облікового запису</h2>
+          <form id="register">
+            <input type="text" placeholder="Ім'я" required />
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Пароль" required />
+            <button type="submit">Зареєструватися</button>
+          </form>
+        </section>
+
+        <section id="bug-report-form" class="form" style="display: none">
+          <h2>Створення звіту про баг</h2>
+          <form id="bug-report">
+            <input type="text" placeholder="Заголовок" required />
+            <textarea placeholder="Опис багу" required></textarea>
+            <select required>
+              <option value="">Виберіть пріоритет</option>
+              <option value="low">Низький</option>
+              <option value="medium">Середній</option>
+              <option value="high">Високий</option>
+            </select>
+            <button type="submit">Створити звіт</button>
+          </form>
+        </section>
+
+        <section id="bug-list" style="display: none">
+          <h2>Список багів</h2>
+          <ul id="bugs"></ul>
+        </section>
+
+        <section id="user-management" style="display: none">
+          <h2>Управління користувачами</h2>
+          <ul id="users"></ul>
+        </section>
+      </main>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
